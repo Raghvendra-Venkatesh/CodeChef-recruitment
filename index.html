@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Club Admin Panel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <img src="VITcc-Logo-June25.png" height="100px" />
+        <h1>Club Admin Panel</h1>
+        <ul>
+            <li><a onclick="showDashboard()">Dashboard</a></li>
+            <li><a onclick="showCreate()">Create Club</a></li>
+        </ul>
+    </header>
+    <main>
+        <section id="dashboard" class="page" style="display: none;">
+            <h2>All Clubs</h2>
+            <div id="clubList"></div>
+        </section>
+        <section id="createForm" class="page" style="display: none;">
+            <h2 id="formTitle">Create New Club</h2>
+            <form id="createClubForm">
+                <input placeholder="Club Name" id="clubName" /><br />
+                <input placeholder="Description" id="clubDesc" /><br />
+                <input placeholder="Category" id="clubCategory" /><br />
+                <input placeholder="President Name" id="clubPresident" /><br />
+                <input placeholder="Faculty Coordinator" id="clubFaculty" /><br />
+                <button type="button" id="createBtn" onclick="createClub()">Create Club</button>
+            </form>
+        </section>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
